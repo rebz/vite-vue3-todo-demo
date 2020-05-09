@@ -20,7 +20,6 @@
 <script>
     import { 
         listTodos, 
-        createTodo, 
         deleteTodo, 
         toggleTodo,
     } from './../store/todoStore'
@@ -29,7 +28,6 @@
         setup() {
             return {
                 listTodos,
-                createTodo, 
                 deleteTodo, 
                 toggleTodo,
             }
