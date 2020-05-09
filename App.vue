@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
   import TodoList from './TodoList.vue'
   import TodoToolbar from './TodoToolbar.vue'
 
