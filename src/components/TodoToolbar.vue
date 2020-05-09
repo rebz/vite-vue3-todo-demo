@@ -14,9 +14,12 @@
 
 <script>
     import { ref } from 'vue'
-    import { createTodo, clearCompletedTodos } from './../store/todoStore'
+    import { useTodoStore } from './../store/consumer'
     export default {
+      
         setup() {
+
+          const { createTodo, clearCompletedTodos } = useTodoStore()
 
             const inputValue = ref('')
 

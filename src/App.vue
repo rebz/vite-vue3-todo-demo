@@ -1,27 +1,13 @@
 <template>
-  <h1>Todo App</h1>
-  <todo-toolbar />
-  <todo-list />
+  <todo-page />
 </template>
 
 <script>
-  import TodoList from './components/TodoList.vue'
-  import TodoToolbar from './components/TodoToolbar.vue'
+  import TodoPage from './pages/TodoPage.vue'
 
   export default {
     components: {
-      TodoList,
-      TodoToolbar
+      TodoPage,
     },
   }
 </script>
-
-<style scoped>
-  h1 {
-    color: #4fc08d;
-  }
-
-  h1, p {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-</style>

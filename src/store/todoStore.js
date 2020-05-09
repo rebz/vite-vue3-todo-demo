@@ -61,7 +61,7 @@ const clearCompletedTodos = () => {
     toDelete.map(todo => deleteTodo(todo.id))
 }
 
-export {
+export default {
     todoState,
     listTodos,
     createTodo,

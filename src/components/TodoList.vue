@@ -18,18 +18,16 @@
 </template>
 
 <script>
-    import { 
-        listTodos, 
-        deleteTodo, 
-        toggleTodo,
-    } from './../store/todoStore'
+    import { useTodoStore } from './../store/consumer'
 
     export default {
         setup() {
+            const { listTodos, toggleTodo, deleteTodo } = useTodoStore()
+
             return {
-                listTodos,
-                deleteTodo, 
-                toggleTodo,
+                listTodos, 
+                toggleTodo, 
+                deleteTodo
             }
         }
     }
