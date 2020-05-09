@@ -16,7 +16,7 @@
     import { ref } from 'vue'
     import { createTodo, clearCompletedTodos } from './../store/todoStore'
     export default {
-        setup(props, context) {
+        setup() {
 
             const inputValue = ref('')
 
