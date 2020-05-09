@@ -1,26 +1,25 @@
 import { reactive, computed } from 'vue';
-import { v4 as uuidv4 } from 'uuid';
-uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+import { generateId } from './../helpers'
 
 const todoState = reactive({ 
     todos: [
         {
-            id: 'awdawdawdawd',
+            id: generateId(),
             desc: 'Clean dishes',
             done: false
         },
         {
-            id: '12ed2t34g3',
+            id: generateId(),
             desc: 'Wash car',
             done: false
         },
         {
-            id: 'vJ78N@n97834h',
+            id: generateId(),
             desc: 'Feed kitties',
             done: false
         },
         {
-            id: '3t4yhtrnw3',
+            id: generateId(),
             desc: 'Dance on the graves of my enemies',
             done: true
         },
@@ -30,7 +29,7 @@ const todoState = reactive({
 const createTodo = (desc) => {
     if (!desc) throw '`task` was not defined'
     todoState.todos.push({
-        id: 'someid',
+        id: generateId(),
         desc,
         done: false
     })
@@ -58,11 +57,12 @@ const toggleTodo = todoId => {
 }
 
 const clearCompletedTodos = () => {
-    const notCompeleted = todoState.todos.filter(todo => !todo.done)
-    todoState.todos = notCompeleted
+    const toDelete = todoState.todos.filter(todo => todo.done)
+    toDelete.map(todo => deleteTodo(todo.id))
 }
 
 export {
+    todoState,
     listTodos,
     createTodo,
     getTodo,

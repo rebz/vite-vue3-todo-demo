@@ -23,17 +23,16 @@
         createTodo, 
         deleteTodo, 
         toggleTodo,
-        clearCompletedTodos
     } from './store/todoStore'
 
     export default {
-        data: () => ({
-            listTodos
-        }),
-        methods: {
-            createTodo,
-            deleteTodo,
-            toggleTodo
+        setup() {
+            return {
+                listTodos,
+                createTodo, 
+                deleteTodo, 
+                toggleTodo,
+            }
         }
     }
 </script>
