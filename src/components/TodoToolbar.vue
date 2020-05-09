@@ -14,7 +14,7 @@
 
 <script>
     import { ref } from 'vue'
-    import { createTodo, clearCompletedTodos } from './store/todoStore'
+    import { createTodo, clearCompletedTodos } from './../store/todoStore'
     export default {
         setup(props, context) {
 

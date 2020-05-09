@@ -5,8 +5,8 @@
 </template>
 
 <script>
-  import TodoList from './TodoList.vue'
-  import TodoToolbar from './TodoToolbar.vue'
+  import TodoList from './components/TodoList.vue'
+  import TodoToolbar from './components/TodoToolbar.vue'
 
   export default {
     components: {

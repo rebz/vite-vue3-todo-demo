@@ -23,7 +23,7 @@
         createTodo, 
         deleteTodo, 
         toggleTodo,
-    } from './store/todoStore'
+    } from './../store/todoStore'
 
     export default {
         setup() {

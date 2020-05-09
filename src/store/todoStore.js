@@ -1,5 +1,5 @@
 import { reactive, computed } from 'vue';
-import { generateId } from './../helpers'
+import { generateId } from './helpers'
 
 const todoState = reactive({ 
     todos: [
